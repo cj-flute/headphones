@@ -29,7 +29,7 @@ a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 a:hover, a:active {
-    background-color: #FF6565;
+    color: #FF6565;
 }
 
 .section-main {
@@ -70,10 +70,20 @@ a:hover, a:active {
     .navigation {
         display: none;
     }
-    .menu-icon, #nav-toggle {
+    .menu-icon {
         display: inline-block;
         cursor: pointer;
         position: absolute;
+    }
+    header {
+        justify-content: center;
+    }
+    .menu-icon {
+        position: absolute;
+        left: 0;
+    }
+    .header-logo {
+        width: 50%;
     }
 }
 .nav-tag:checked ~ .navigation  {

@@ -3,11 +3,12 @@ body {
     padding: 0;
 }
 
-body {
-    position: relative;
+@font-face {
+    font-family: 'Source San Pro';
+    src: url(/SourceSansPro/SourceSansPro-Regular.otf);
 }
 
-header {
+.header-div {
     /* border: 1px solid black; */
     position: absolute;
     display: flex;
@@ -16,6 +17,18 @@ header {
     left: 15%;
     width: 80%;
 
+}
+.bak-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000px;
+    width: 100%;
+    border: 1px solid black;
+}
+#bk-img {
+    width: inherit;
+    height: inherit;
 }
 
 .header-logo {
@@ -27,22 +40,20 @@ a {
     color: white;
     text-decoration: none;
     margin-top: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a:hover,
 a:active {
-    background-color: #FF6565;
+    color: #FF6565;
 }
 
-.section-main {
-    background-image: url(/images/headphones_hero_1.jpg);
-    height: 800px;
+.section-main, .section-what-we-do {
+    height: 1000px;
     width: 100%;
-    background-repeat: round;
     display: flex;
     justify-content: space-around;
 }
+
 
 .box {
     height: 300px;
@@ -70,26 +81,10 @@ a:active {
     display: none;
 }
 
-@media (max-width: 690px) {
-    .navigation {
-        display: none;
-    }
-
-    .menu-icon,
-    #nav-toggle {
-        display: inline-block;
-        cursor: pointer;
-        position: absolute;
-    }
-}
 
 .nav-tag:checked~.navigation {
     display: flex;
 }
-
-/* .menu-icon:checked ~ .navigation {
-    display: block;
-} */
 
 #div1,
 #p-div {
@@ -121,4 +116,105 @@ h1 {
 
 .btn:hover {
     background-color: rgba(255, 101, 101, 0.9);
+}
+
+
+.section-what-we-do {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.part {
+    border: 1px solid black;
+    height: 250px;
+}
+
+.part_1_what_we_do {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.part_2_icons {
+    width: 60%;
+    display:flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    margin-left: 20%;
+    box-sizing: border-box;
+}
+
+.icon {
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+}
+.icon-img {
+    height: 60%;
+    width: 60%;
+    border: 1px solid black;
+    background-repeat:round;
+}
+
+.icon-message {
+    width: inherit;
+}
+#icon-img1 {
+    background-image: url(/images/icon-img1.png);
+}
+#icon-img2 {
+    background-image: url(/images/icon-img2.png);
+}#icon-img3 {
+    background-image: url(/images/icon-img3.png);
+}#icon-img4 {
+    background-image: url(/images/icon-img4.png);
+}
+
+@media (max-width: 768px) {
+    .part_2_icons {
+        display: grid;
+        /* box-sizing: border-box; */
+        width: 70%;
+        height: 70%;
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .navigation {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .header-div {
+        justify-content: center;
+    }
+
+    .menu-icon {
+        position: absolute;
+        left: 0;
+    }
+
+    .header-logo {
+        width: 50%;
+    }
+
+    .section-what-we-do {
+        height: 1500px;
+        justify-content: space-between;
+    }
+    .part_1_what_we_do {
+        height: 32%;
+    }
+    .part_2_icons {
+        display: grid;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 66%;
+    }
 }
