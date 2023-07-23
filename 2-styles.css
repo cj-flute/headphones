@@ -18,14 +18,16 @@ body {
     width: 80%;
 
 }
+
 .bak-img {
     position: absolute;
     top: 0;
     left: 0;
     height: 1000px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
+
 #bk-img {
     width: inherit;
     height: inherit;
@@ -47,7 +49,8 @@ a:active {
     color: #FF6565;
 }
 
-.section-main, .section-what-we-do {
+.section-main,
+.section-what-we-do, .section-result {
     height: 1000px;
     width: 100%;
     display: flex;
@@ -120,7 +123,7 @@ h1 {
 
 
 .section-what-we-do {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
 }
@@ -137,7 +140,7 @@ h1 {
 
 .part_2_icons {
     width: 60%;
-    display:flex;
+    display: flex;
     justify-content: center;
     /* flex-direction: row; */
     margin-left: 20%;
@@ -149,25 +152,78 @@ h1 {
     width: auto;
     /* border: 1px solid black; */
 }
+
 .icon-img {
     height: 60%;
     width: 60%;
     /* border: 1px solid black; */
-    background-repeat:round;
+    background-repeat: round;
 }
 
 .icon-message {
     width: inherit;
 }
+
 #icon-img1 {
     background-image: url(/images/icon-img1.png);
 }
+
 #icon-img2 {
     background-image: url(/images/icon-img2.png);
-}#icon-img3 {
+}
+
+#icon-img3 {
     background-image: url(/images/icon-img3.png);
-}#icon-img4 {
+}
+
+#icon-img4 {
     background-image: url(/images/icon-img4.png);
+}
+
+.result-section-img {
+    width: inherit;
+    height: inherit;
+    /* border: 1px solid green; */
+    position: absolute;
+    left: 0;
+}
+#result-img {
+    width: inherit;
+    height: inherit;
+}
+.result-body {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: white;
+
+}
+.result-body h1 {
+    margin-top: 15%;
+}
+.result-body div {
+    width: 60%;
+    /* border: 1px solid white; */
+}
+#polygon-div {
+    display: flex;
+    margin-top: 10%;
+    height: 25%;
+    width: 80%;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 60px;
+}
+.poly {
+    width: 90%;
+    height: 100%;
+    background-image: url(/images/pentagone.png);
+    background-repeat: round;
+    font-size: 10px;
+}
+.poly h1 {
+    font-size: 50px;
+    margin-top: 70px;
 }
 
 @media (max-width: 768px) {
@@ -177,7 +233,7 @@ h1 {
         width: 70%;
         height: 70%;
     }
-    
+
 }
 
 @media (max-width: 690px) {
@@ -208,13 +264,34 @@ h1 {
         height: 1500px;
         justify-content: space-between;
     }
+
     .part_1_what_we_do {
         height: 32%;
     }
+
     .part_2_icons {
         display: grid;
         justify-content: center;
         box-sizing: border-box;
         height: 66%;
+    }
+    #polygon-div {
+        /* border: 1px solid white; */
+        display: grid;
+        justify-content: center;
+        box-sizing: border-box;
+        /* box-sizing: border-box; */
+        height: 66%;
+        width: 70%;
+    }
+
+    #polygon-div div {
+        /* border: 1px solid white; */
+        width: 100%;
+        height: 90%;
+    }
+    .section-result {
+        height: 1900px;
+
     }
 }
